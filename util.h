@@ -23,4 +23,15 @@ void* queue_peek(struct queue_head* queue);
 
 void queue_foreach(struct queue_head* queue,void (*func)(void *arg, void *data), void *arg);
 
+
+uint16_t swap16(uint16_t num);
+
+uint32_t swap32(uint32_t num);
+
+#define hton16(num) swap16(num);
+#define ntoh16(num) swap16(num);
+#define hton32(num) swap32(num);
+#define ntoh32(num) swap32(num);
+
+
 #endif
