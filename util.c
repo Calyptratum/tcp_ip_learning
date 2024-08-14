@@ -1,5 +1,5 @@
 #include "util.h"
-#include "memory.h"
+#include "plat.h"
 struct queue_entry {
     struct queue_entry *next;
     void *data;
