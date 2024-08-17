@@ -33,5 +33,7 @@ uint32_t swap32(uint32_t num);
 #define hton32(num) swap32(num);
 #define ntoh32(num) swap32(num);
 
+net_err_t tools_init(void);
+uint16_t checksum16(uint32_t offset, void* buf, uint16_t len, uint32_t pre_sum, int complement);
 
 #endif
