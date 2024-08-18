@@ -1,8 +1,9 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <stdarg.h>
-#include "dbg.h"
-//#include "net_plat.h"
+#include "../head/dbg.h"
+#include "../../platform/net_plat.h"
 
 /**
  * @brief 调试信息输出
@@ -37,7 +38,7 @@ void dbg_print(int m_level, int s_level, const char* file, const char* func, int
         // 具体的信息
         va_start(args, fmt);
         vsprintf(str_buf, fmt, args);
-        printf("%s\n"DBG_STYLE_RESET, str_buf);
+        plat_printf("%s%s\n", str_buf,DBG_STYLE_RESET);
         va_end(args);
     }
 }

@@ -1,5 +1,5 @@
-#ifndef __NETERR_H__
-#define __NETERR_H__
+#ifndef __NET_ERR_H__
+#define __NET_ERR_H__
 /*
  *信息码（错误码）信息 
  */
@@ -34,4 +34,4 @@ typedef enum _net_err_t{
     NET_ERR_EOF = -23,                      // 文件结束
 }net_err_t;
 
-#endif  //_NETERR_H__
+#endif  //_NET_ERR_H__
